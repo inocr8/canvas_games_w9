@@ -8,11 +8,12 @@ window.onload = function(){
   var upButton = document.getElementById('button-up');
   var downButton = document.getElementById('button-down');
   var resetButton = document.getElementById('reset');
+  var dropdown = document.getElementById('colourList');
 
   var xPosition = 50;
   var yPosition = 50;
   var sketchIncrement = 10;
-  context.strokeStyle = "red";
+  //context.strokeStyle = "black";
   context.lineWidth = 10;
   context.lineCap = "round";
   context.beginPath();
@@ -52,6 +53,13 @@ window.onload = function(){
     xPosition = 50;
     yPosition = 50;
     context.beginPath();
+  }
+
+  dropdown.onchange = function(){
+    var picked = this.value;
+    console.log(picked);
+    context.beginPath();
+    context.strokeStyle = picked;
   }
 
 };
