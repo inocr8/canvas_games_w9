@@ -7,6 +7,7 @@ window.onload = function(){
   var rightButton = document.getElementById('button-right');
   var upButton = document.getElementById('button-up');
   var downButton = document.getElementById('button-down');
+  var resetButton = document.getElementById('reset');
 
   var xPosition = 50;
   var yPosition = 50;
@@ -44,5 +45,10 @@ window.onload = function(){
     context.stroke();
     yPosition += sketchIncrement;
   };
+
+  resetButton.onclick=function(){
+    console.log('Reset');
+    context.clearRect(0,0, canvas.width, canvas.height);
+  }
 
 };
