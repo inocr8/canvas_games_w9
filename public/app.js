@@ -8,10 +8,15 @@ window.onload = function(){
   var upButton = document.getElementById('button-up');
   var downButton = document.getElementById('button-down');
 
+  var xPosition = 50;
+  var yPosition = 50;
+  var sketchIncrement = 10;
+  context.beginPath();
+
   // context.fillStyle = "wheat";
   // context.fillRect(10, 10, 100, 50);
 
-  // context.beginPath();
+  
   // context.moveTo(100,100);
   // context.lineTo(100,150);
   // context.stroke();
@@ -23,12 +28,13 @@ window.onload = function(){
   //   context.fill();
   // }
 
-  canvas.onclick = function(event) {
-    console.log('clicked', event);
-    x = event.x;
-    y = event.y;
-    drawCircle(x,y);
-  }
+
+  // canvas.onclick = function(event) {
+  //   console.log('clicked', event);
+  //   x = event.x;
+  //   y = event.y;
+  //   drawCircle(x,y);
+  // }
 
   leftButton.onclick=function(){
     console.log('Left');
@@ -36,6 +42,10 @@ window.onload = function(){
 
   rightButton.onclick=function(){
     console.log('Right');
+    context.moveTo(xPosition, yPosition);
+    context.lineTo(xPosition + sketchIncrement, yPosition);
+    context.stroke();
+    xPosition += sketchIncrement;
   };
 
   upButton.onclick=function(){
