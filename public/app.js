@@ -12,31 +12,10 @@ window.onload = function(){
   var yPosition = 50;
   var sketchIncrement = 10;
   context.strokeStyle = "red";
+  context.lineWidth = 10;
+  context.lineCap = "round";
   context.beginPath();
   context.moveTo(xPosition, yPosition);
-
-  
-  // context.fillRect(10, 10, 100, 50);
-
-  
-  // context.moveTo(100,100);
-  // context.lineTo(100,150);
-  // context.stroke();
-
-  // var drawCircle = function(x,y) {
-  //   context.beginPath();
-  //   context.arc(x, y, 25, 0, 2 * Math.PI);
-  //   context.stroke();
-  //   context.fill();
-  // }
-
-
-  // canvas.onclick = function(event) {
-  //   console.log('clicked', event);
-  //   x = event.x;
-  //   y = event.y;
-  //   drawCircle(x,y);
-  // }
 
   leftButton.onclick=function(){
     console.log('Left');
