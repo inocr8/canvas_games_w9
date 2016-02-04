@@ -11,9 +11,11 @@ window.onload = function(){
   var xPosition = 50;
   var yPosition = 50;
   var sketchIncrement = 10;
+  context.strokeStyle = "red";
   context.beginPath();
+  context.moveTo(xPosition, yPosition);
 
-  // context.fillStyle = "wheat";
+  
   // context.fillRect(10, 10, 100, 50);
 
   
@@ -38,11 +40,13 @@ window.onload = function(){
 
   leftButton.onclick=function(){
     console.log('Left');
+    context.lineTo(xPosition - sketchIncrement, yPosition);
+    context.stroke();
+    xPosition -= sketchIncrement;
   };
 
   rightButton.onclick=function(){
     console.log('Right');
-    context.moveTo(xPosition, yPosition);
     context.lineTo(xPosition + sketchIncrement, yPosition);
     context.stroke();
     xPosition += sketchIncrement;
@@ -50,10 +54,16 @@ window.onload = function(){
 
   upButton.onclick=function(){
     console.log('Up');
+    context.lineTo(xPosition, yPosition - sketchIncrement);
+    context.stroke();
+    yPosition -= sketchIncrement;
   };
 
   downButton.onclick=function(){
     console.log('Down');
+    context.lineTo(xPosition, yPosition + sketchIncrement);
+    context.stroke();
+    yPosition += sketchIncrement;
   };
 
 };
