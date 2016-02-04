@@ -49,6 +49,9 @@ window.onload = function(){
   resetButton.onclick=function(){
     console.log('Reset');
     context.clearRect(0,0, canvas.width, canvas.height);
+    xPosition = 50;
+    yPosition = 50;
+    context.beginPath();
   }
 
 };
