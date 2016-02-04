@@ -1,7 +1,31 @@
 canvas {
-  border: 1px solid black;
+  border: 10px solid tomato;
+  background-image: url(http://www.tiptopcanning.com/images/big-tomatoes.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 body {
-  margin: 0;
+  margin: 20px 20px;
+}
+
+h1 {
+  font-size: 3em;
+  color: tomato;
+}
+
+button {
+  background-color: tomato;
+  margin-top: 10px;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 2.3px;
+}
+
+select {
+  background-color: tomato;
+}
+
+#numberForm input {
+  background-color: tomato;
 }

@@ -18,7 +18,7 @@ window.onload = function(){
   var xPosition = 50;
   var yPosition = 50;
   var sketchIncrement = 10;
-  //context.strokeStyle = "black";
+  context.strokeStyle = "tomato";
   context.lineWidth = 10;
   context.lineCap = "round";
   context.beginPath();
