@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Etch A Sketch</title>
-    <link rel='stylesheet' type='text/css' href='main.css'>
-    <script src='app.js'></script>
-  </head>
-  <body>
-    <canvas id='main' width='600' height='200'></canvas>
-    <button type="button" id="button-left">Left</button>
-    <button type="button" id="button-right">Right</button>
-    <button type="button" id="button-up">Up</button>
-    <button type="button" id="button-down">Down</button>
-    <button type="button" id="reset">Reset</button>
+<head>
+  <title>Etch A Sketch</title>
+  <link rel='stylesheet' type='text/css' href='main.css'>
+  <script src='app.js'></script>
+</head>
+<body>
+  <canvas id='main' width='600' height='200'></canvas>
+  <button type="button" id="button-left">Left</button>
+  <button type="button" id="button-right">Right</button>
+  <button type="button" id="button-up">Up</button>
+  <button type="button" id="button-down">Down</button>
+  <button type="button" id="reset">Reset</button>
 
-    <h3>Choose a colour:</h3>
-      <select style="width: 280px" id="colourList" name="colourList">
-        <option selected="">Please Select</option>
-        <option>Wheat</option>
-        <option>Tomato</option>
-        <option>Pink</option>
-        <option>Lime</option>
-      </select>
+  <h3>Choose a colour:</h3>
+  <select style="width: 280px" id="colourList" name="colourList">
+    <option selected="">Please Select</option>
+    <option>Wheat</option>
+    <option>Tomato</option>
+    <option>Pink</option>
+    <option>Lime</option>
+  </select>
 
-  </body>
+  <h3>Choose a line width:</h3>
+  <form id="numberForm" name="numberForm">
+    Width (between 5 and 20):
+    <input type="number" name="quantity" min="5" max="20">
+  </form>
+
+</body>
 </html>

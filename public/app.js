@@ -9,6 +9,7 @@ window.onload = function(){
   var downButton = document.getElementById('button-down');
   var resetButton = document.getElementById('reset');
   var dropdown = document.getElementById('colourList');
+  var numberForm = document.getElementById('numberForm');
 
   var xPosition = 50;
   var yPosition = 50;
@@ -60,6 +61,13 @@ window.onload = function(){
     console.log(picked);
     context.beginPath();
     context.strokeStyle = picked;
+  }
+
+  numberForm.onchange = function(){
+    var picked = this.quantity.value;
+    console.log(picked);
+    context.lineWidth = picked;
+    context.beginPath();
   }
 
 };
